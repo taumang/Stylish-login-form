@@ -8,23 +8,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<img class="wave" src="img/wave.png">
+	<img class="wave" src="img/wave3.png">
 	<div class="container">
 		<div class="img">
-			<img src="img/bg.svg">
+			<img src="img/coffee-beans.svg">
 		</div>
 		<div class="login-content">
 			<form action="index.html">
-				<img src="img/avatar.svg">
-				<h2 class="title">Welcome</h2>
+				<!-- <img src="img/avatar.svg"> -->
+				<h2 class="title">Coffee Time</h2>
            		
 					<div class="input-div one">
 						<div class="i">
 								<i class="fas fa-user"></i>
 						</div>
 						<div class="div">
-								<h5>Username</h5>
-								<input type="text" class="input">
+								<h5>Email</h5>
+								<input type="text" class="input" id="signup-email">
 						</div>
 					</div>
 
@@ -34,7 +34,7 @@
 							</div>
 							<div class="div">
 									<h5>Password</h5>
-									<input type="password" class="input">
+									<input type="password" class="input" id="signup-password">
 							</div>
 					</div>
 
@@ -43,6 +43,33 @@
             </form>
         </div>
     </div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyB8Ebs1oxXYKpIlZ32KeQ5ae5QAWZc1NwQ",
+		authDomain: "coffee-time-login.firebaseapp.com",
+		projectId: "coffee-time-login",
+		storageBucket: "coffee-time-login.appspot.com",
+		messagingSenderId: "312114230272",
+		appId: "1:312114230272:web:0af8c20adf2bbf70ebd4e5"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+
+	//auth and firebase ref:
+	const auth = firebase.auth();
+	const db = firebase.firestore();
+	</script>
+
+
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/authentication.js"></script>
 </body>
 </html>
